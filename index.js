@@ -1,7 +1,11 @@
+const express = require('express');
+const app = express()
+
 require('dotenv').config();
+require('./routes')(app)
+require('./lib/boot')(app)
 
 const { sequelize } = require('./db')();
-
 sequelize
   .authenticate()
   .then(() => {
