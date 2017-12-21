@@ -1,23 +1,26 @@
-const defaultConfig = {
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  host: '127.0.0.1',
-  dialect: 'mysql',
-  migrationStorageTableName: 'sequelize_meta',
-};
-
 module.exports = {
   development: {
-    ...defaultConfig,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    host: '127.0.0.1',
     database: 'bookly_development',
+    dialect: 'mysql',
+    migrationStorageTableName: 'sequelize_meta',
   },
   test: {
-    ...defaultConfig,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    host: '127.0.0.1',
     database: 'bookly_test',
+    dialect: 'mysql',
+    migrationStorageTableName: 'sequelize_meta',
   },
   production: {
-    ...defaultConfig,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
     host: process.env.DB_HOST,
     database: process.env.DB_NAME,
+    dialect: 'mysql',
+    migrationStorageTableName: 'sequelize_meta',
   },
 };
