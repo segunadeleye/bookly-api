@@ -6,6 +6,9 @@ module.exports = {
     database: 'bookly_development',
     dialect: 'mysql',
     migrationStorageTableName: 'sequelize_meta',
+    define: {
+      underscored: true,
+    },
   },
   test: {
     username: process.env.DB_USERNAME,
@@ -14,6 +17,9 @@ module.exports = {
     database: 'bookly_test',
     dialect: 'mysql',
     migrationStorageTableName: 'sequelize_meta',
+    define: {
+      underscored: true,
+    },
   },
   production: {
     username: process.env.DB_USERNAME,
@@ -22,5 +28,8 @@ module.exports = {
     database: process.env.DB_NAME,
     dialect: 'mysql',
     migrationStorageTableName: 'sequelize_meta',
+    define: {
+      underscored: true,
+    },
   },
 };
