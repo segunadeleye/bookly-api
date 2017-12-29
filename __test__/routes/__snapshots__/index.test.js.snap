@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should load index page 1`] = `"Bookly. Let's know what you are reading."`;
+exports[`should load index page 1`] = `
+"{
+    \\"message\\": \\"Bookly. Let's know what you are reading.\\"
+}"
+`;
