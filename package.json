@@ -4,8 +4,15 @@
   "description": "Bookly API - Let people know what you are reading and find out what they feel about it.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
+    "start": "npm run apidoc && nodemon --exec babel-node index.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
     "test": "jest"
+  },
+  "apidoc": {
+    "name": "Bookly API - Documentation",
+    "template": {
+      "forceLanguage": "en"
+    }
   },
   "repository": {
     "type": "git",
